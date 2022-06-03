@@ -25,7 +25,7 @@ def get_functions(filename):
             funcs.append(function.name)
 
     for class_ in classes:
-        print("Class name:", class_.name)
+        print("Class name:", class_.name, "\n")
         methods = [n for n in class_.body if isinstance(n, ast.FunctionDef)]
         for method in methods:
             if method.name[0] != '_':
@@ -60,12 +60,14 @@ for line in inputfile.strip().split('\n'):
                 # else:
                 #     funcs_present[cl] = (func, funcs_present[cl][1]+1)
 
-print(funcs_present)
+print("Data Structures available:",data_strutures, "\n")
+
+print("funcs available in current data structure:", functions, "\n")
+
+print("Functions detected in input file:",funcs_present, "\n")
 
 # print(funcs_in_input)
-print("funcs:", functions)
-print(data_strutures)
-print("dict", dict)
+print("Class and object initiaized with its memory address", dict, "\n")
 
 def amortized_aggregate_dynamic(func):
     # count = number of total operations
