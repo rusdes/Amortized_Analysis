@@ -1,4 +1,4 @@
-from DynamicArray import DynamicArray
+from data_structures.DynamicArray import DynamicArray
 
 if __name__ == "__main__":
     arr = DynamicArray()

@@ -1,7 +1,7 @@
 import ast
 import math
 
-exec(open("Exp1/input.py").read())
+exec(open("input.py").read())
 dict = locals().copy()
 
 dict.pop('ast')
@@ -44,12 +44,12 @@ for i in data_strutures:
     if i not in dict:
         data_strutures.remove(i)
 
-functions = get_functions("Exp1/DynamicArray.py")
+functions = get_functions("data_structures/DynamicArray.py")
 funcs_in_input = get_funcs_from_input(functions, dict)
 
 # read input
 funcs_present = []
-inputfile = open("Exp1/input.py").read()
+inputfile = open("input.py").read()
 for line in inputfile.strip().split('\n'):
     for cl, instance in list(funcs_in_input.items()):
         for func in functions:
